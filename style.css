@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Hanken Grotesk, Arial;
 }
 
@@ -43,6 +44,7 @@ body {
     flex-direction: column;
     gap: 20px;
     justify-content: center;
+    width: 350px;
 }
 
 .right-div h1 {
@@ -73,7 +75,6 @@ body {
     background-color: rgb(255, 240, 240);
     padding: 10px;
     border-radius: 10px;
-    width: 250px;
 }
 
 .memory-stat-div {
@@ -216,4 +217,32 @@ button {
 
 button:hover {
     background-color: hsl(241, 81%, 54%);
+}
+
+@media (max-width: 675px) {
+    .container {
+        flex-direction: column; 
+        width: 100vw;
+    }
+
+    .left-div {
+        width: 100vw;
+    }
+
+    .right-div {
+        width: 100vw;
+    }
+
+    .right-div, 
+    .left-div {
+        flex: 1;
+    }
+
+    .left-div {
+        border-radius: 0 0 20px 20px;
+    }
+
+    body {
+        min-height: 100vh;
+    }
 }
